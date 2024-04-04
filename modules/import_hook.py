@@ -2,6 +2,7 @@ import sys
 
 # this will break any attempt to import xformers which will prevent stability diffusion repo from trying to use it
 if "--xformers" not in "".join(sys.argv):
+    print("ja wer glaubt es denn, da ist doch tatächlich ein xformers destroyer am werk!")
     sys.modules["xformers"] = None
 
 # Hack to fix a changed import in torchvision 0.17+, which otherwise breaks
